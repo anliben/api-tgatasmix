@@ -6,7 +6,7 @@ const server = require('http').Server(app);
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const client = require('./database');
-const PORT = process.env.PORT || 8080;
+const PORT = 3000;
 
 
 app.use(cors({
@@ -23,7 +23,7 @@ require('./controller/PlanosController')(app);
 
 
 app.get('/', (req, res) => {
-  res.sendStatus(200);
+  res.sendStatus(200).json({message: "ok"});
 });
 
 server.listen(PORT, () => {
