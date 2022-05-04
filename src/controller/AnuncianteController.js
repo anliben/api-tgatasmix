@@ -73,7 +73,8 @@ router.put("/updateOne", async (req, res) => {
                     cache: req.body.cache,
                     pagamento: req.body.pagamento,
                     horario: req.body.horario,
-                    locais: req.body.locais
+                    locais: req.body.locais,
+                    activated: req.body.activated
                 }
             })
             return res.status(200).json(response)
